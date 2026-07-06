@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 
-from app.routers import health
+from app.routers import health, datasets
 
 app = FastAPI(
     title = "Enterprise Data Analytics API",
@@ -8,7 +8,6 @@ app = FastAPI(
     version = "1.0.0"
 ) 
 
-app.include_router(health.router)
 
 @app.get("/") 
 def home():
@@ -16,5 +15,11 @@ def home():
         "message" : "Welcome to Enterprise Data Analytics API",
         "status" : "running"
     }
+
+
+
+
+app.include_router(health.router)
+app.include_router(datasets.router)
     
 
