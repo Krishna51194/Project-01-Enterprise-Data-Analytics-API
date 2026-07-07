@@ -1,0 +1,1 @@
+print("Animals package initialized")
