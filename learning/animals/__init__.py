@@ -1,1 +1,0 @@
-print("Animals package initialized")
